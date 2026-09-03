@@ -1,0 +1,9 @@
+# Place trained model files here.
+#
+# Auto-detected by the model loader (see app/ml/model_loader.py):
+#   detection*   (.pth, .pt, .h5, .pb, .pkl, .joblib, .onnx)
+#   intensity*   (.pth, .pt, .h5, .pb, .pkl, .joblib, .onnx)
+#   trajectory*  (.pth, .pt, .h5, .pb, .pkl, .joblib, .onnx)
+#
+# If no file is present, the application falls back to deterministic Mock*
+# implementations so the API still works end-to-end.

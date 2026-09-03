@@ -1,0 +1,3 @@
+# Place sample data here. Satellite imagery, weather CSVs/NetCDF, etc.
+# The default data_loader uses curated in-memory mock data, so the app runs
+# without anything added to this folder.
