@@ -6,3 +6,7 @@ data/
 *.npy
 models/*.pth
 .env
+# Frontend
+cyclone-ai/node_modules/
+cyclone-ai/dist/
+
