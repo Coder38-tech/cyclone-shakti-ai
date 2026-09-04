@@ -1,200 +1,130 @@
-🌪️ Cyclone Shakti AI — Frontend
-AI-Powered Cyclone Monitoring & Decision Support Dashboard
+# 🌪️ Cyclone Shakti AI — Frontend
 
-The Cyclone Shakti AI Frontend is a React-based web dashboard designed for real-time cyclone monitoring, track visualization, intensity analysis, and disaster advisories.
+### AI-Powered Cyclone Monitoring, GIS Visualization & Decision Support Dashboard
 
-It provides an interactive GIS interface that allows users to visualize cyclone movement, forecast tracks, uncertainty regions, wind-speed predictions, cyclone intelligence, and AI-generated advisories.
+> A modern React + Leaflet frontend for visualizing cyclone movement, forecast tracks, uncertainty regions, intensity predictions, analytics, and disaster advisories.
 
-🚀 Features
-🗺️ Interactive Cyclone Tracking
-Interactive map powered by Leaflet and OpenStreetMap
-Current cyclone center visualization
-Custom animated cyclone-eye marker
-Predicted cyclone track
-Forecast position markers
-Clickable forecast points
-Forecast information popups
-Cyclone uncertainty cone visualization
-Latitude/longitude-based cyclone positioning
-📊 Analytics Dashboard
-Maximum predicted wind speed
-Average forecast wind speed
-Forecast duration
-AI prediction confidence
-Wind-speed forecast visualization
-Intensity analysis
-Confidence progress indicator
-Forecast analysis table
-Wind-speed change analysis
-🚨 AI Advisory System
-Current cyclone alert status
-Cyclone severity classification
-Cyclone information
-Detailed advisory message
-Recommended safety actions
-Disaster preparedness information
-Advisory disclaimer
-🎯 Dashboard
+---
 
-The main dashboard provides a consolidated view of:
+## 🚀 Overview
 
-Current cyclone information
-Cyclone location
-Detection confidence
-Intensity prediction
-Track prediction
-Forecast timeline
-AI advisory
-Interactive cyclone map
-⏱️ Forecast Timeline
-Forecast timeline slider
-Select individual forecast hours
-Play/Pause forecast animation
-Automatically moves through forecast points
-Synchronized map and cyclone information
-🧭 Navigation
+**Cyclone Shakti AI** is an AI-powered cyclone monitoring and decision-support platform developed for disaster management and early-warning use cases.
 
-The application contains four main sections:
+The frontend provides an interactive **GIS-based command dashboard** that transforms cyclone prediction data into clear and actionable visual information.
 
-Dashboard
-Cyclone Tracking
-Analytics
-Advisories
+It allows users to:
 
-Navigation is implemented using React state-based page switching.
+- 🗺️ Monitor the current cyclone position
+- 🌪️ Visualize predicted cyclone movement
+- 📍 Explore individual forecast positions
+- 🌀 View the cyclone uncertainty region
+- 📊 Analyze predicted wind speed and intensity
+- 🚨 View cyclone severity and safety advisories
+- ⏱️ Animate the predicted cyclone path over time
+- 🎯 Monitor AI detection and prediction confidence
 
-🛠️ Technology Stack
-Technology	Purpose
-React	Frontend UI
-Vite	Development & build tool
-JavaScript	Application logic
-CSS	Styling & responsive layout
-Leaflet	Interactive maps
-React Leaflet	React integration for Leaflet
-OpenStreetMap	Map tiles
-Git & GitHub	Version control
-📁 Project Structure
-frontend/
-│
-├── public/
-│
-├── src/
-│   │
-│   ├── assets/
-│   │   ├── hero.png
-│   │   ├── react.svg
-│   │   └── vite.svg
-│   │
-│   ├── components/
-│   │   ├── AdvisoryPanel.jsx
-│   │   ├── CycloneInfo.jsx
-│   │   ├── CycloneMarker.jsx
-│   │   ├── MapSection.jsx
-│   │   ├── Navbar.jsx
-│   │   └── Sidebar.jsx
-│   │
-│   ├── pages/
-│   │   ├── Analytics.jsx
-│   │   ├── Advisories.jsx
-│   │   └── CycloneTracking.jsx
-│   │
-│   ├── App.css
-│   ├── App.jsx
-│   ├── dummyData.js
-│   └── main.jsx
-│
-├── .gitignore
-├── eslint.config.js
-├── index.html
-├── package.json
-├── package-lock.json
-├── README.md
-└── vite.config.js
-⚙️ Requirements
+---
 
-Before running the frontend, make sure you have:
+# ✨ Key Features
 
-Node.js installed
-npm installed
-Git installed if working with the team repository
+## 🗺️ Interactive Cyclone Tracking
 
-Check your versions:
+The tracking interface provides a real-time-style GIS visualization of cyclone movement.
 
-node --version
-npm --version
-📦 Installation
+**Features include:**
 
-Clone the repository:
+- Interactive Leaflet map
+- OpenStreetMap base layer
+- Current cyclone center
+- Custom animated cyclone-eye marker
+- Predicted cyclone track
+- Forecast position markers
+- Clickable forecast points
+- Forecast information popups
+- Cyclone uncertainty cone
+- Latitude / longitude visualization
+- Interactive forecast timeline
 
-git clone https://github.com/Coder38-tech/cyclone-shakti-ai.git
+---
 
-Navigate to the frontend:
+## 📊 Analytics Dashboard
 
-cd cyclone-shakti-ai/frontend
+The Analytics section converts forecast data into an easy-to-understand analytical view.
 
-Install dependencies:
+### Displays:
 
-npm install
-▶️ Running the Frontend
+- 🌬️ Maximum predicted wind speed
+- 📈 Average forecast wind speed
+- ⏱️ Forecast duration
+- 🎯 AI prediction confidence
+- 📊 Wind-speed forecast visualization
+- 🌪️ Intensity classification
+- 📉 Wind-speed change analysis
+- 📋 Forecast analysis table
 
-Start the development server:
+---
 
-npm run dev
+## 🚨 AI Advisory System
 
-Vite will provide a local development URL similar to:
+The advisory interface presents cyclone-related warnings and recommended actions.
 
-http://localhost:5173
+### Includes:
 
-Open the URL in your browser.
+- Current cyclone alert status
+- Severity classification
+- Cyclone information
+- Detailed advisory message
+- Recommended safety actions
+- Disaster preparedness guidance
+- Advisory disclaimer
 
-🗺️ GIS Implementation
+The interface is designed to make technical prediction output easier to understand for decision-makers and users.
 
-The frontend uses Leaflet + React Leaflet for cyclone visualization.
+---
 
-Cyclone coordinates are handled according to the GeoJSON convention:
+## 🎯 Command Dashboard
 
-GeoJSON:
-[longitude, latitude]
+The main dashboard provides a consolidated operational view.
 
-while Leaflet expects:
+### Dashboard includes:
 
-[latitude, longitude]
+| Information | Visualization |
+|---|---|
+| Cyclone Location | Interactive GIS Map |
+| Cyclone Track | Forecast Polyline |
+| Current Position | Custom Cyclone Marker |
+| Forecast Positions | Map Markers |
+| Uncertainty | Uncertainty Cone |
+| Wind Speed | Forecast Data |
+| Detection Confidence | Intelligence Panel |
+| Prediction Confidence | Intelligence Panel |
+| Advisory | AI Advisory Panel |
+| Forecast Time | Interactive Timeline |
 
-Therefore, GeoJSON coordinates are converted before being rendered on the map.
+---
 
-Example:
+# ⏱️ Forecast Timeline
 
-const [longitude, latitude] = coordinate;
+The frontend includes an interactive forecast timeline.
 
-const position = [latitude, longitude];
-🌪️ Cyclone Visualization
+Users can:
 
-The application uses a custom cyclone marker to represent the cyclone eye.
+- Select individual forecast hours
+- Move through predicted cyclone positions
+- Play the forecast automatically
+- Pause the forecast animation
+- Observe synchronized map updates
+- View corresponding wind-speed predictions
 
-The marker includes:
+### Forecast flow
 
-Cyclone eye
-Animated ring
-Custom Leaflet divIcon
-Forecast information popup
-
-Forecast points are displayed separately on the track and can be selected to update the forecast information.
-
-📈 Forecast Visualization
-
-The frontend supports forecast points containing information such as:
-
-{
-  "hour": 24,
-  "latitude": 17.1,
-  "longitude": 74.5,
-  "wind_speed": 138
-}
-
-The selected forecast point updates:
-
-Cyclone position
-Forecast hour
-Wind speed
-Cyclone information
-Map marker
+```text
+Forecast Hour
+      ↓
+Selected Forecast Point
+      ↓
+Cyclone Position
+      ↓
+Wind Speed + Information
+      ↓
+Map + Intelligence Panel Update
